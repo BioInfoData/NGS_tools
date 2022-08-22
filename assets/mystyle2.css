@@ -1,0 +1,167 @@
+body {
+    background-color: MintCream;
+    font-size: x-large;
+
+    }
+
+h1 {
+  color: DarkSlateGray;
+  text-align: center;
+}
+
+h2 {
+  color: LightCoral;
+  text-align: center;
+  margin-right: 300px;
+  margin-left: 250px;
+}
+
+p {
+    margin-right: 200px;
+    margin-left: 150px;
+    line-height: 200%;
+    color:Teal;
+    text-align:justify;
+}
+
+
+
+.add_comment form{
+    margin-right: 200px;
+    margin-left: 150px;
+    color:Teal;
+}
+
+
+.add_comment button {
+    background: CadetBlue;
+    color: white;
+}
+
+
+.comments p{
+       line-height: 15px;
+        margin: 15px 0;
+        margin-right: 200px;
+        margin-left: 150px;
+        font-size: large;
+}
+
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: x-large;
+}
+
+
+button:hover {
+  background-color: #111;
+}
+
+
+.singup button {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: x-large;
+  background: CadetBlue;
+}
+
+.singup button:hover {
+  background-color: #111;
+}
+
+.articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.wrapper nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: CadetBlue;
+}
+
+.wrapper nav li {
+  float: right;
+}
+
+.wrapper nav li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.wrapper nav li a:hover {
+  background-color: #111;
+}
+
+.types nav ul {
+  display:inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: none;
+}
+
+.types nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+   margin: 15px;
+  text-decoration: none;
+  background-color: LightCoral;
+}
+
+
+
+.types nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.articles a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 30px;
+  margin: 15px;
+  text-decoration: none;
+  background-color: CadetBlue;
+  font-size: 48px;
+  margin-right: 400px;
+  margin-left: 350px;
+}
+
+.article-detail a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  margin: 15px;
+  font-size: 30px;
+  text-decoration: none;
+  background-color: LightCoral;
+  margin-right: 400px;
+  margin-left: 350px;
+}
+
+.site_form.form-group{
+text-align: center;
+}

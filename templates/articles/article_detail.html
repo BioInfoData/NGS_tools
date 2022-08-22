@@ -1,0 +1,50 @@
+{% extends 'base_layout.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="article-detail">
+    <div class="article">
+        <h1>{{article.title}}</h1>
+        <p>{{article.body}}</p>
+        <p style="font-size: large;">Last update at {{article.date}}</p>
+        <a href = "{{article.link}}"  target="_blank" >
+            Go to {{article.title}} site
+        </a>
+
+
+    </div>
+</div>
+
+<div class="add_comment">
+{% if new_comment %}
+        <div class="alert alert-success" role="alert">
+          <p> Thank you! Your comment was submitted</p>
+        </div>
+{% else %}
+
+    {% if user.is_authenticated %}
+        {% load crispy_forms_tags %}
+        <p><strong>Add your comment here:</strong></p>
+        <form method="post" style="margin-top: 1.3em;">
+              {% render_field comment_form.body type="text" class="form-control" id="comment" placeholder="Add comment" %}
+              {% csrf_token %}
+              <p style="margin-left: 50px;"><button type="submit" class="btn btn-primary btn-lg">Submit</button></p>
+        </form>
+
+    {% else %}
+        <p>To add a comment please <a href="{% url 'accounts:login_form' %}">Login</a></p>
+    {% endif %}
+{% endif %}
+</div>
+
+
+
+{% for comment in comments %}
+        <div class="comments" style="padding: 10px;">
+          <p><strong>{{ comment.name }}</strong></p>
+            <p>{{ comment.created_on }}</p>
+            <p>{{ comment.body | linebreaks }}</p>
+
+        </div>
+        {% endfor %}
+
+{% endblock %}

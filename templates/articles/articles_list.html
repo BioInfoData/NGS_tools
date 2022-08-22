@@ -1,0 +1,87 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<h1>NGS Tools For Beginners</h1>
+<p class ="intro">
+    This website summarizes the most useful tools for bioinformatic analysis of
+</p>
+<p><strong>Next Generation Sequencing (NGS)</strong></p>
+<p class ="intro">
+    If you want to leave a comment on the articles please <a href="{% url 'accounts:login_form' %}">Login</a>
+    or
+    <a href="{% url 'accounts:singup_form' %}">Signup</a>
+</p>
+
+<div class="types">
+<nav>
+    <ul>
+        <li><a href="#func">Functional analysis</a> </li>
+        <li><a href="#DE">Differential Expression</a> </li>
+        <li><a href="#counts">Reads count</a></li>
+        <li><a href="#alignment">Alignment Tools</a></li>
+        <li><a href="#qc">Sequencing QC</a></li>
+
+    </ul>
+
+</nav>
+
+
+</div>
+
+<h2 id="qc">Sequencing QC</h2>
+<div class="articles">
+    {%for article in articles_qc %}
+    <div class="article">
+        <a href ="{% url 'articles:detail' slug=article.slug %}">
+            {{article.title}}
+        </a>
+    </div>
+    {%endfor%}
+</div>
+
+<h2 id = "alignment">Alignment Tools</h2>
+<div class="articles">
+    {%for article in articles_alignment %}
+    <div class="article">
+        <a href ="{% url 'articles:detail' slug=article.slug %}">
+            {{article.title}}
+        </a>
+    </div>
+    {%endfor%}
+</div>
+
+
+<h2 id="counts">Read Counts</h2>
+<div class="articles">
+    {%for article in articles_counts %}
+    <div class="article">
+        <a href ="{% url 'articles:detail' slug=article.slug %}">
+            {{article.title}}
+        </a>
+    </div>
+    {%endfor%}
+</div>
+
+<h2 id="DE">Differential Expression</h2>
+<div class="articles">
+    {%for article in articles_DE %}
+    <div class="article">
+        <a href ="{% url 'articles:detail' slug=article.slug %}">
+            {{article.title}}
+        </a>
+    </div>
+    {%endfor%}
+</div>
+
+
+<h2 id ="func">Functional analysis</h2>
+<div class="articles">
+    {%for article in articles_func %}
+    <div class="article">
+        <a href ="{% url 'articles:detail' slug=article.slug %}">
+            {{article.title}}
+        </a>
+    </div>
+    {%endfor%}
+</div>
+
+{% endblock %}
