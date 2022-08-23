@@ -1,1 +1,1 @@
-web: gunicorn NGStoolsDB.wsgi.application --log-file -
+web: gunicorn NGStoolsDB.wsgi --log-file -
